@@ -5,18 +5,18 @@
 
 // Ex: 6 é perfeito, pois 6 = 1 + 2 + 3, que são seus divisores
 
-function perfeita (valor) {
+function perfeito (valor) {
     let soma = 0;
-    for (i = 1; valor > i; i++) {
+    for (let i = 1; valor > i; i++) {
         if (valor % i === 0) {
             soma = soma + i
         }
     }
     if (soma == valor) {
-        console.log("Perfeito!")
+        return true;
     } else {
-        console.log("Não Perfeito!")
+        return false;
     }
 }
 
-perfeita(4)
+console.log(perfeito(28))
